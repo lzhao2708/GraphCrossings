@@ -1,12 +1,12 @@
 # Graph Crossings
 
-> An Obsidian plugin for visualizing and optimizing graph layouts with crossing minimization.
+> An Obsidian plugin for visualizing your vault's note connections as an interactive graph.
 
 ## About
 
 **Status:** Work in Progress / Temporary
 
-This plugin provides tools to visualize your vault's note connections as a graph and minimize edge crossings using force-directed layout with barycenter heuristics.
+This plugin provides interactive graph visualization of your vault's note connections using force-directed layout physics.
 
 ### Features
 
@@ -15,12 +15,15 @@ This plugin provides tools to visualize your vault's note connections as a graph
   - Repulsion (nodes push apart)
   - Attraction (linked nodes pull together)
   - Centering force (keeps graph centered)
-- **Graph Crossing Minimization**: Barycenter heuristic optimization to reduce visual clutter
+  - Friction and damping for stable convergence
 - **Interactive Controls**: 
   - Zoom and pan with mouse wheel and drag
   - Adjust layout parameters in real-time via sliders
   - Reset to defaults button
 - **Ghost Nodes**: Auto-create missing notes for unresolved links
+
+### Future
+- **Graph crossing minimization**
 
 ### Development
 
