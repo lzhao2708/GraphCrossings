@@ -1,0 +1,40 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "allowArbitraryExtensions": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "libReplacement": true,
+    "module": "node16",
+    "moduleResolution": "node16",
+    "noEmit": true,
+    "paths": {
+      "yeoman-generator": [
+        "./node_modules/yeoman-generator/dist/index.d.ts",
+        "./node_modules/yeoman-generator/dist/index.js"
+      ]
+    },
+    "skipLibCheck": true,
+    "target": "es2022",
+    "types": [
+      "@total-typescript/ts-reset",
+      "node"
+    ],
+    "verbatimModuleSyntax": true
+  },
+  "include": [
+    "./commitlint.config.ts",
+    "./eslint.config.*ts",
+    "./scripts/**/*.ts",
+    "./src/**/*.ts"
+  ]
+}

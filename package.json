@@ -1,0 +1,98 @@
+{
+  "name": "generator-obsidian-plugin",
+  "version": "11.10.0",
+  "description": "Obsidian Plugin Bootstrap",
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/mnaoumov/generator-obsidian-plugin/",
+  "bugs": "https://github.com/mnaoumov/generator-obsidian-plugin/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnaoumov/generator-obsidian-plugin.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Michael Naumov",
+    "email": "mnaoumov@gmail.com",
+    "url": "https://github.com/mnaoumov/"
+  },
+  "type": "module",
+  "main": "generators/index.js",
+  "files": [
+    "generators/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "npm-shrinkwrap.json",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "jiti scripts/build.ts",
+    "commit": "jiti scripts/commit.ts",
+    "format": "jiti scripts/format.ts",
+    "format:check": "jiti scripts/format-check.ts",
+    "lint": "jiti scripts/lint.ts",
+    "lint:fix": "jiti scripts/lint-fix.ts",
+    "lint:md": "jiti scripts/lint-md.ts",
+    "lint:md:fix": "jiti scripts/lint-md-fix.ts",
+    "prepare": "jiti scripts/prepare.ts",
+    "spellcheck": "jiti scripts/spellcheck.ts",
+    "version": "jiti scripts/version.ts"
+  },
+  "overrides": {
+    "eslint-plugin-import": "npm:eslint-plugin-import-x@^4.16.2",
+    "type-fest": "^5.6.0"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "semver": "^7.8.1",
+    "yeoman-generator": "^8.2.2",
+    "yosay": "^3.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@commitlint/types": "^21.0.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.7.1",
+    "@eslint/compat": "^2.1.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^25.9.4",
+    "@types/semver": "^7.7.1",
+    "@types/yosay": "^2.0.3",
+    "@typescript-eslint/utils": "^8.60.0",
+    "@vitest/coverage-v8": "^4.1.7",
+    "@yeoman/adapter": "^4.0.2",
+    "better-typescript-lib": "^2.12.0",
+    "cspell": "^10.0.0",
+    "czg": "^1.13.1",
+    "dprint": "^0.54.0",
+    "esbuild": "^0.28.0",
+    "eslint": "^10.4.0",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-jsdoc": "^63.0.0",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-tsdoc": "^0.5.2",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.7.0",
+    "markdownlint": "^0.40.0",
+    "markdownlint-cli2": "^0.22.1",
+    "markdownlint-rule-relative-links": "^5.1.0",
+    "nano-staged": "^1.0.2",
+    "type-fest": "^5.6.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0",
+    "vitest": "^4.1.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
