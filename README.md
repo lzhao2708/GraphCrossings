@@ -1,64 +1,47 @@
-# generator-obsidian-plugin
+# Graph Crossings
 
-> Obsidian Plugin Yeoman Generator
+> An Obsidian plugin for visualizing and optimizing graph layouts with crossing minimization.
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/mnaoumov)
-[![NPM package](https://badge.fury.io/js/generator-obsidian-plugin.svg)](https://npmjs.org/package/generator-obsidian-plugin)
-[![GitHub release](https://img.shields.io/github/v/release/mnaoumov/generator-obsidian-plugin)](https://github.com/mnaoumov/generator-obsidian-plugin/releases)
-[![GitHub downloads](https://img.shields.io/github/downloads/mnaoumov/generator-obsidian-plugin/total)](https://github.com/mnaoumov/generator-obsidian-plugin/releases)
+## About
 
-## Installation
+**Status:** Work in Progress / Temporary
 
-For template generator to be fully working it requires [Node.js](https://nodejs.org/) v18 or higher.
+This plugin provides tools to visualize your vault's note connections as a graph and minimize edge crossings using force-directed layout with barycenter heuristics.
 
-First, install [Yeoman](http://yeoman.io) and generator-obsidian-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+### Features
 
+- **Custom Graph View**: Interactive canvas-based graph visualization of your vault's connections
+- **Force-Directed Layout**: Physics-based node positioning with:
+  - Repulsion (nodes push apart)
+  - Attraction (linked nodes pull together)
+  - Centering force (keeps graph centered)
+- **Graph Crossing Minimization**: Barycenter heuristic optimization to reduce visual clutter
+- **Interactive Controls**: 
+  - Zoom and pan with mouse wheel and drag
+  - Adjust layout parameters in real-time via sliders
+  - Reset to defaults button
+- **Ghost Nodes**: Auto-create missing notes for unresolved links
+
+### Development
+
+Requirements: Node.js v18+
+
+Build the plugin:
 ```bash
-npm install -g yo
-npm install -g generator-obsidian-plugin
+npm run build
 ```
 
-Then generate your new project:
+### Architecture
 
-```bash
-mkdir new-plugin-name
-cd new-plugin-name
-yo obsidian-plugin
-```
+- `src/main.ts` — Plugin entry point and command registration
+- `src/settings.ts` — Settings UI with force parameter controls
+- `src/graph.ts` — Graph building, optimization, and path normalization
+- `src/custom-graph-view.ts` — Canvas rendering and interaction
 
-## Sample output
+### Type Safety
 
-You can see an sample output of this generator at [Sample Plugin Extended](https://github.com/mnaoumov/obsidian-sample-plugin-extended).
-
-## Features of this template
-
-- [Obsidian Extended Typings](https://github.com/Fevol/obsidian-typings/) for internal [Obsidian](https://obsidian.md/) API.
-- Code style is forced via [`ESLint`](https://eslint.org/).
-- Spell checking is forced via [`CSpell`](https://cspell.org/).
-- Code formatting is forced via [`dprint`](https://dprint.dev/).
-- CLI commands and code helpers from [Obsidian Dev Utils](https://github.com/mnaoumov/obsidian-dev-utils).
-- Supports [svelte](https://svelte.dev/) components. See example in `src/SvelteComponents` in the generated project.
-- Supports [react](https://react.dev) components. See example in `src/ReactComponents` in the generated project.
-- Supports [SASS](https://sass-lang.com/) for CSS pre-processing. See example in `src/styles/main.scss` in the generated project.
-
-### NPM Commands
-
-This template offers several NPM commands to facilitate common development tasks:
-
-See [documentation](https://github.com/mnaoumov/obsidian-dev-utils?tab=readme-ov-file#cli-commands) for the full list of such commands and how to extend them for your needs.
-
-The documentation above shows usage examples in the form `npx obsidian-dev-utils foo`. This template additionally allows to call them via `npm run foo`.
-
-<!-- markdownlint-disable MD033 -->
-
-<a href="https://www.buymeacoffee.com/mnaoumov" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217"></a>
-
-<!-- markdownlint-enable MD033 -->
-
-## My other Obsidian resources
-
-[See my other Obsidian resources](https://github.com/mnaoumov/obsidian-resources).
+All code is TypeScript strict-mode compliant (`tsc --noEmit` passes).
 
 ## License
 
-© [Michael Naumov](https://github.com/mnaoumov/)
+MIT
